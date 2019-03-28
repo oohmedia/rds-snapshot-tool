@@ -318,7 +318,7 @@
 					},
 					"S3Key": { "Fn::If" : [ "CrossAccount", "copy_snapshots_dest_rds.zip", "copy_snapshots_no_x_account_rds.zip" ]}
 				},
-				"MemorySize" : 512,
+				"MemorySize" : 128,
 				"Description": "This functions copies snapshots for RDS Instances shared with this account. It checks for existing snapshots following the pattern specified in the environment variables with the following format: <dbInstanceIdentifier-identifier>-YYYY-MM-DD-HH-MM",
 				"Environment": {
 					"Variables": {
@@ -369,7 +369,7 @@
 					},
 					"S3Key": {"Fn::If" : [ "CrossAccount", "delete_old_snapshots_dest_rds.zip", "delete_old_snapshots_no_x_account_rds.zip" ]}
 				},
-				"MemorySize" : 512,
+				"MemorySize" : 128,
 				"Description": "This function enforces retention on the snapshots shared with the destination account. ",
 				"Environment": {
 					"Variables": {
