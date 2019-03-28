@@ -9,7 +9,7 @@
 		"SnapshotPattern": {
 			"Type": "String",
 			"Default": "ALL_SNAPSHOTS",
-			"Description": "Python r`egex for matching instance names to backup. Use \"ALL_SNAPSHOTS\" to back up every RDS instance in the region."
+			"Description": "Python regex for matching instance names to backup. Use \"ALL_SNAPSHOTS\" to back up every RDS instance in the region."
 		},
 		"RetentionDays": {
 			"Type": "Number",
